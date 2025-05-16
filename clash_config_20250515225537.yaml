@@ -1,31 +1,27 @@
-# 由 VLESS 转换生成的 Clash 配置
-# 生成时间: 2025-05-15 22:55:37
-# 原始链接: vless://84a91a76-1d66-45a8-8065-ed7fb7666a11@v2ray.tw-travel.online:13538?type=ws&path=%2Fv2ray&host=&security=tls&fp=chrome&alpn=#v2ray-q3ius0iq
-
 proxies:
-  - name: VLESS-v2ray.tw-travel.online:13538
-  type: vless
-  server: v2ray.tw-travel.online
-  port: 13538
-  uuid: 84a91a76-1d66-45a8-8065-ed7fb7666a11
-  tls: True
-  network: ws
-  servername: 
-  client-fingerprint: chrome
-  ws-opts:
-    path: /v2ray
-    headers:
-      Host: 
+  - {
+  "name": "v2ray-q3ius0iq",
+  "type": "vless",
+  "server": "v2ray.tw-travel.online",
+  "port": 13538,
+  "uuid": "84a91a76-1d66-45a8-8065-ed7fb7666a11",
+  "tls": true,
+  "servername": "",
+  "skip-cert-verify": false,
+  "network": "ws",
+  "udp": true,
+  "ws-path": "/v2ray"
+}
 
 proxy-groups:
-  - name: 🚀 Proxy
+  - name: ?? Proxy
     type: select
     proxies:
-      - VLESS-v2ray.tw-travel.online:13538
+      - v2ray-q3ius0iq
 
 rules:
-  - DOMAIN-SUFFIX,google.com,🚀 Proxy
-  - DOMAIN-KEYWORD,facebook,🚀 Proxy
-  - IP-CIDR,91.108.56.0/22,🚀 Proxy
+  - DOMAIN-SUFFIX,google.com,?? Proxy
+  - DOMAIN-KEYWORD,facebook,?? Proxy
+  - IP-CIDR,91.108.56.0/22,?? Proxy
   - GEOIP,CN,DIRECT
-  - MATCH,🚀 Proxy
+  - MATCH,?? Proxy
